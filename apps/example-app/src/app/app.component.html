@@ -1,3 +1,18 @@
 <ion-app>
-    <ion-router-outlet></ion-router-outlet>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-item [routerLink]="'/home'">
+        Vanilla
+      </ion-item>
+      <ion-item [routerLink]="'/ionic-design'">
+        Ionic
+      </ion-item>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

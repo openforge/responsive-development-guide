@@ -7,8 +7,12 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
     },
     {
+        path: 'ionic-design',
+        loadChildren: () => import('./ionic-design/ionic-design.module').then(m => m.IonicDesignPageModule),
+    },
+    {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'ionic-design',
         pathMatch: 'full',
     },
 ];
