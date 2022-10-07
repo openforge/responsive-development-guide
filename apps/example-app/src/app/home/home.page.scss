@@ -3,11 +3,9 @@
     --section-module-font-size: 1.2rem;
     --footer-module-font-size: 0.75rem;
 }
-
 p {
     margin: 0;
 }
-
 /* Header Module */
 header {
     padding: 10px;
@@ -39,7 +37,7 @@ div.main-content {
     width: 100%;
     height: 100%;
 }
-section aside {
+aside {
     padding: 10px;
     border-right: 1px solid #0c699e;
     /* This height and width are relatives to the Content module */
@@ -51,7 +49,7 @@ section aside {
         font-size: 1em;
     }
 }
-section article {
+article {
     padding: 10px;
     /* This height and width are relatives to the Content module */
     height: 100%;

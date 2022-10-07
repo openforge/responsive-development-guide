@@ -35,7 +35,7 @@ ion-content section {
     /* If we change this one manually only will impact in the Content module */
     font-size: var(--section-module-font-size);
 }
-ion-content aside {
+aside {
     padding: 10px;
     border-right: 1px solid #0c699e;
     /* This height and width are relatives to the Content module */
@@ -47,7 +47,7 @@ ion-content aside {
         font-size: 1em;
     }
 }
-ion-content article {
+article {
     padding: 10px;
     /* This height and width are relatives to the Content module */
     height: 100%;
