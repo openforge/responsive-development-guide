@@ -1,24 +1,79 @@
-#container {
-    text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+:root {
+    --header-module-font-size: 1.6rem;
+    --section-module-font-size: 1.2rem;
+    --footer-module-font-size: 0.75rem;
 }
 
-#container strong {
-    font-size: 20px;
-    line-height: 26px;
-}
-
-#container p {
-    font-size: 16px;
-    line-height: 22px;
-    color: #8c8c8c;
+p {
     margin: 0;
 }
 
-#container a {
-    text-decoration: none;
+/* Header Module */
+header {
+    padding: 10px;
+    color: white;
+    background-color: #0c699e;
+    /* This height and width are relatives to the viewport */
+    height: 7.5vh;
+    width: 100vw;
+    /* This font size will scale with document */
+    /* If we change this one manually only will impact in the Header module */
+    font-size: var(--header-module-font-size);
+    p {
+        /* This font size will scale with Header module */
+        font-size: 1.2em;
+    }
+}
+/* Content Module */
+section {
+    /* This height and width are relatives to the viewport */
+    height: 87.5vh;
+    width: 100vw;
+    /* This font size will scale with document */
+    /* If we change this one manually only will impact in the Content module */
+    font-size: var(--section-module-font-size);
+}
+div.main-content {
+    display: flex;
+    /* This height and width are relatives to the Content module */
+    width: 100%;
+    height: 100%;
+}
+section aside {
+    padding: 10px;
+    border-right: 1px solid #0c699e;
+    /* This height and width are relatives to the Content module */
+    height: 100%;
+    width: 25%;
+    p {
+        margin-bottom: 12px;
+        /* This font size will scale with Content module */
+        font-size: 1em;
+    }
+}
+section article {
+    padding: 10px;
+    /* This height and width are relatives to the Content module */
+    height: 100%;
+    width: 85%;
+    p {
+        margin-bottom: 12px;
+        /* This font size will scale with Content module */
+        font-size: 1.1em;
+    }
+}
+/* Footer Module */
+footer {
+    padding: 10px;
+    background-color: #e7e7e7;
+    /* This height and width are relatives to the viewport */
+    height: 5vh;
+    width: 100vw;
+    /* This font size will scale with document */
+    /* If we change this one manually only will impact in the Footer module */
+    font-size: var(--footer-module-font-size);
+    p {
+        /* This font size will scale with Footer module */
+        font-size: 0.8em;
+    }
 }

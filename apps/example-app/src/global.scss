@@ -24,3 +24,24 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+:root {
+    --document-font-size: 16px;
+    --document-font-size-900: 13px;
+    --document-font-size-400: 10px;
+}
+
+html {
+    /* If we change this one manually will impact in all the modules */
+    font-size: var(--document-font-size);
+}
+@media (max-width: 900px) {
+    html {
+        font-size: var(--document-font-size-900);
+    }
+}
+@media (max-width: 400px) {
+    html {
+        font-size: var(--document-font-size-400);
+    }
+}
