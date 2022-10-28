@@ -1,17 +1,77 @@
 :root {
-    --header-module-font-size: 1.6rem;
-    --section-module-font-size: 1.2rem;
+    /* CSS Variables for each module */
+    /* This are called global scope variables */
+    --header-module-font-size: 1.2rem;
+    --section-module-font-size: 1rem;
+    --cards-components-font-size: 1rem;
     --footer-module-font-size: 0.75rem;
 }
 p {
     margin: 0;
 }
+/* Main Section */
+section.main-section {
+    display: flex;
+    background-color: #f4f6f9;
+}
+/* Sliders Module */
+section.sliders {
+    /* This height and width are relatives to the viewport */
+    height: 100vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    p {
+        /* This font size is overriding the variable in order to not be modified when updating the document font size
+        since this text is not needed to be responsive
+        */
+        font-size: 16px;
+    }
+}
+div.sliders-wrappers {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    margin: 16px;
+    box-shadow: 0px 6px 10px -5px rgba(0, 0, 0, 0.75);
+}
+ion-range {
+    --bar-background: var(--openforge-orange-lighter-25);
+    --bar-background-active: var(--openforge-orange);
+}
+ion-button {
+    margin: 16px;
+    width: 100%;
+    --background: var(--openforge-orange);
+}
+/* Phone Module */
+section.phone {
+    /* CSS Variables for device size */
+    /* Needs to be set here in order to apply the % to the right module */
+    /* If we set this properties at the top with the other ones, the % will apply to the full viewport instead the module */
+    /* This are called local scope variables */
+    --device-height: 80%;
+    --device-width: 35%;
+    /* This height and width are relatives to the viewport */
+    height: 100vh;
+    width: 75vw;
+}
+div.phone-wrapper {
+    margin: 16px auto;
+    /* This height and width are relatives to the Phone Module */
+    height: var(--device-height);
+    width: var(--device-width);
+    border-radius: 40px;
+    border: 4px solid #31393e;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 40px 5px rgba(255, 255, 255, 0.2);
+}
 /* Header Module */
-header {
+ion-header {
     padding: 10px;
     color: white;
     background-color: #0c699e;
-    /* This height and width are relatives to the viewport */
+    /* This height and width are relatives to the Phone Module */
     height: 7.5%;
     width: 100%;
     /* This font size will scale with document */
@@ -19,52 +79,38 @@ header {
     font-size: var(--header-module-font-size);
     p {
         /* This font size will scale with Header module */
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
 /* Content Module */
-section {
-    /* This height and width are relatives to the viewport */
+ion-content {
+    /* This height and width are relatives to the Phone Module */
     height: 87.5%;
     width: 100%;
     /* This font size will scale with document */
     /* If we change this one manually only will impact in the Content module */
     font-size: var(--section-module-font-size);
 }
-div.main-content {
-    display: flex;
-    /* This height and width are relatives to the Content module */
-    width: 100%;
-    height: 100%;
+ion-card {
+    /* This font size will scale with document */
+    /* If we change this one manually only will impact in the Cards components */
+    /* Ion Cards needs the font size directly here, the content module font size change not apply here */
+    font-size: var(--cards-components-font-size);
 }
-aside {
-    padding: 10px;
-    border-right: 1px solid #0c699e;
-    /* This height and width are relatives to the Content module */
-    height: 100%;
-    width: 25%;
-    p {
-        margin-bottom: 12px;
-        /* This font size will scale with Content module */
-        font-size: 1em;
-    }
+ion-card ion-card-title {
+    font-size: 1.2em;
 }
-article {
-    padding: 10px;
-    /* This height and width are relatives to the Content module */
-    height: 100%;
-    width: 85%;
-    p {
-        margin-bottom: 12px;
-        /* This font size will scale with Content module */
-        font-size: 1.1em;
-    }
+ion-card ion-card-subtitle {
+    font-size: 1em;
+}
+ion-card ion-card-content {
+    font-size: 1.1em;
 }
 /* Footer Module */
-footer {
+ion-footer {
     padding: 10px;
     background-color: #e7e7e7;
-    /* This height and width are relatives to the viewport */
+    /* This height and width are relatives to the Phone Module */
     height: 5%;
     width: 100%;
     /* This font size will scale with document */
@@ -74,13 +120,4 @@ footer {
         /* This font size will scale with Footer module */
         font-size: 0.8em;
     }
-}
-section.phone {
-    margin: 0 auto;
-    height: 80vh;
-    width: 25vw;
-    border-radius: 40px;
-    border: 4px solid #31393e;
-    overflow: hidden;
-    box-shadow: inset 0px 0px 40px 5px rgba(255, 255, 255, 0.2);
 }

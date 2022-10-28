@@ -23,5 +23,12 @@ export class HomePageComponent {
 
     public sectionModuleValueChange(value: string): void {
         document.documentElement.style.setProperty('--section-module-font-size', `${value}rem`);
+        document.documentElement.style.setProperty('--cards-components-font-size', `${value}rem`);
+    }
+
+    public changeDeviceSize(): void {
+        const nodeList = Array.from(document.getElementsByClassName('phone') as HTMLCollectionOf<HTMLElement>);
+        nodeList.forEach(ele => ele.style.setProperty('--device-height', `60%`));
+        nodeList.forEach(ele => ele.style.setProperty('--device-width', `30%`));
     }
 }

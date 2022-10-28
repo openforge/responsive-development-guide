@@ -1,77 +1,61 @@
-<section class="phone">
-  <input type="range" min="10" max="20" step="1" value="16" (input)="documentModuleValueChange($event.target.value)">
-  <header>
-    <input type="range" min="0.4" max="1.6" step="0.2" value="1.6"
-      (input)="headerModuleValueChange($event.target.value)">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel.
-    </p>
-  </header>
-  <section>
-    <input type="range" min="0.4" max="2.0" step="0.2" value="1.2"
-      (input)="sectionModuleValueChange($event.target.value)">
-    <div class="main-content">
-      <aside>
+<section class="main-section">
+  <section class="sliders">
+    <div class="sliders-wrappers">
+      <p>Document Module</p>
+      <ion-range min="10" max="20" step="1" value="16" (ionChange)="documentModuleValueChange($event.detail.value)">
+      </ion-range>
+      <p>Header Module</p>
+      <ion-range min="0.6" max="1.2" step="0.2" value="1.2" (ionChange)="headerModuleValueChange($event.detail.value)">
+      </ion-range>
+      <p>Content Module</p>
+      <ion-range min="0.6" max="2.0" step="0.2" value="1" (ionChange)="sectionModuleValueChange($event.detail.value)">
+      </ion-range>
+      <p>Footer Module</p>
+      <ion-range min="0.5" max="1.0" step="0.05" value="0.75"
+        (ionChange)="footerModuleValueChange($event.detail.value)">
+      </ion-range>
+    </div>
+    <ion-button (click)="changeDeviceSize()">
+      Device Size
+    </ion-button>
+  </section>
+  <section class="phone">
+    <div class="phone-wrapper">
+      <ion-header>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non cursus elit. Praesent nec urna quam.
-          Aenean
-          convallis felis scelerisque sapien ullamcorper dictum. Sed hendrerit nisl quis pellentesque tincidunt. Aliquam
-          neque
-          sapien, lacinia porttitor ligula ornare, volutpat tempus risus. Mauris scelerisque sem sapien, vitae semper
-          metus
-          dignissim id. Donec risus turpis, ultricies quis faucibus in, fermentum ut velit. Proin faucibus nisl mauris,
-          vitae
-          malesuada ipsum pulvinar et.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel.
         </p>
-        <p>Vivamus lobortis est varius massa egestas, eget viverra odio vestibulum. In odio
-          dolor,
-          dapibus eget eros eget, elementum tristique nunc. Fusce mattis turpis enim, eu molestie metus malesuada at.
-          Aliquam
-          erat volutpat. Aenean libero sapien, laoreet sed sem eget, cursus ultricies risus. Curabitur sed tellus
-          lectus.
-          Nunc
-          porttitor odio et elit venenatis dapibus.</p>
-      </aside>
-      <article>
+      </ion-header>
+      <ion-content>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              <p>Card Title</p>
+            </ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          <ion-card-header>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+      <ion-footer>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tortor et risus aliquam rutrum. Mauris tempor
-          sollicitudin tempus. In rhoncus nunc arcu, at laoreet libero porta ut. Mauris non urna quis leo feugiat
-          egestas
-          in
-          et neque. Fusce vel accumsan augue. Sed congue, mauris vel blandit ornare, mauris lorem aliquam eros, ut
-          ultrices
-          tellus purus vitae ante. Pellentesque mattis, ipsum et fermentum facilisis, mi dolor posuere felis, a porta
-          tellus
-          lectus sed mi. Nulla sollicitudin leo at leo porttitor cursus. Aenean tempor tincidunt sapien, in malesuada
-          massa
-          condimentum hendrerit. Donec convallis mi risus, quis auctor massa efficitur quis. Suspendisse id gravida
-          metus,
-          ornare elementum justo. Fusce tincidunt libero lorem, et malesuada tortor fermentum at.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel.
         </p>
-        <p>
-          Morbi vulputate sodales lectus ut porttitor. Vestibulum quis purus eu felis pellentesque scelerisque et
-          rhoncus
-          dui.
-          Curabitur sed mollis urna. Sed lobortis, eros in vestibulum sagittis, elit felis aliquet turpis, vel placerat
-          elit
-          nibh nec odio. Ut nec pretium arcu. Aliquam eu libero blandit, bibendum ligula quis, viverra ante. Nullam
-          consequat,
-          tortor luctus euismod sodales, massa felis cursus velit, consectetur pellentesque mi erat vel urna. Quisque
-          nec
-          dui
-          tempor, fermentum sapien eu, sagittis nisl. Vestibulum condimentum ut ipsum eget maximus. Nunc id mauris sed
-          libero
-          dictum tristique ut ac orci. Sed ut nibh mauris.
-        </p>
-      </article>
+      </ion-footer>
     </div>
   </section>
-  <footer>
-    <input type="range" min="0.5" max="1.0" step="0.05" value="0.75"
-      (input)="footerModuleValueChange($event.target.value)">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel.
-    </p>
-  </footer>
-
 </section>
