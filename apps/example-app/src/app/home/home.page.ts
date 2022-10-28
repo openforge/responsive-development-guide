@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+
+import { PopoverComponent } from './popover.component';
 
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
@@ -7,6 +10,9 @@ import { Component } from '@angular/core';
     styleUrls: ['home.page.scss'],
 })
 export class HomePageComponent {
+    // eslint-disable-next-line no-empty-function
+    public constructor(public popoverController: PopoverController) {}
+
     public documentModuleValueChange(value: string): void {
         document.documentElement.style.setProperty('--document-font-size', `${value}px`);
         document.documentElement.style.setProperty('--document-font-size-900', `${+value - 3}px`);
@@ -26,9 +32,20 @@ export class HomePageComponent {
         document.documentElement.style.setProperty('--cards-components-font-size', `${value}rem`);
     }
 
-    public changeDeviceSize(): void {
-        const nodeList = Array.from(document.getElementsByClassName('phone') as HTMLCollectionOf<HTMLElement>);
-        nodeList.forEach(ele => ele.style.setProperty('--device-height', `60%`));
-        nodeList.forEach(ele => ele.style.setProperty('--device-width', `30%`));
+    public async presentPopover(e: Event): Promise<void> {
+        const popover = await this.popoverController.create({
+            component: PopoverComponent,
+            event: e,
+        });
+
+        void popover.onDidDismiss().then(response => {
+            if (response.role === 'selected') {
+                const sizeData = response.data as { height: number; width: number };
+                const nodeList = Array.from(document.getElementsByClassName('phone') as HTMLCollectionOf<HTMLElement>);
+                nodeList.forEach(ele => ele.style.setProperty('--device-height', `${sizeData.height}px`));
+                nodeList.forEach(ele => ele.style.setProperty('--device-width', `${sizeData.width}px`));
+            }
+        });
+        await popover.present();
     }
 }

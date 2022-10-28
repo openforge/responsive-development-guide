@@ -5,9 +5,10 @@ import { IonicModule } from '@ionic/angular';
 
 import { HomePageComponent } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
+import { PopoverComponent } from './popover.component';
 
 @NgModule({
     imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
-    declarations: [HomePageComponent],
+    declarations: [HomePageComponent, PopoverComponent],
 })
 export class HomePageModule {}

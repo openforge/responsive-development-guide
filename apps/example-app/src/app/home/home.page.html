@@ -15,7 +15,7 @@
         (ionChange)="footerModuleValueChange($event.detail.value)">
       </ion-range>
     </div>
-    <ion-button (click)="changeDeviceSize()">
+    <ion-button id="click-trigger" (click)="presentPopover($event)">
       Device Size
     </ion-button>
   </section>
