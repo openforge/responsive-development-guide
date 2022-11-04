@@ -12,7 +12,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: 'ionic-design',
+        redirectTo: 'home',
         pathMatch: 'full',
     },
 ];
