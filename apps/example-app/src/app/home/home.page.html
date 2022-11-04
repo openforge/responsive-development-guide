@@ -1,18 +1,61 @@
-<ion-header [translucent]="true">
-    <ion-toolbar>
-        <ion-title> Blank </ion-title>
-    </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-    </ion-header>
-
-    <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<section class="main-section">
+  <section class="sliders">
+    <div class="sliders-wrappers">
+      <p>Document Module</p>
+      <ion-range min="10" max="20" step="1" value="16" (ionChange)="documentModuleValueChange($event.detail.value)">
+      </ion-range>
+      <p>Header Module</p>
+      <ion-range min="0.6" max="1.2" step="0.2" value="1.2" (ionChange)="headerModuleValueChange($event.detail.value)">
+      </ion-range>
+      <p>Content Module</p>
+      <ion-range min="0.6" max="2.0" step="0.2" value="1" (ionChange)="sectionModuleValueChange($event.detail.value)">
+      </ion-range>
+      <p>Footer Module</p>
+      <ion-range min="0.5" max="1.0" step="0.05" value="0.75"
+        (ionChange)="footerModuleValueChange($event.detail.value)">
+      </ion-range>
     </div>
-</ion-content>
+    <ion-button id="click-trigger" (click)="presentPopover($event)">
+      Device Size
+    </ion-button>
+  </section>
+  <section class="phone">
+    <div class="phone-wrapper">
+      <ion-header>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel.
+        </p>
+      </ion-header>
+      <ion-content>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              <p>Card Title</p>
+            </ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          <ion-card-header>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+      <ion-footer>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel.
+        </p>
+      </ion-footer>
+    </div>
+  </section>
+</section>
