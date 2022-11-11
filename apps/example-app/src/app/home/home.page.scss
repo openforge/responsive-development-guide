@@ -18,9 +18,13 @@ section.main-section {
 section.sliders {
     /* This height and width are relatives to the viewport */
     height: 100vh;
-    width: 25vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     p {
         /* This font size is overriding the variable in order to not be modified when updating the document font size
         since this text is not needed to be responsive
@@ -30,11 +34,17 @@ section.sliders {
     }
 }
 div.sliders-wrappers {
+    /* This height and width are relatives to the Sliders Module */
     width: 100%;
     background-color: white;
-    padding: 10px;
+    padding: 32px;
     margin: 16px;
     box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.75);
+}
+div.sliders-zone {
+    /* This height and width are relatives to the Parent */
+    height: 100%;
+    width: 50%;
 }
 ion-range {
     --bar-background: var(--openforge-orange-lighter-25);
@@ -46,7 +56,6 @@ ion-range {
 ion-button {
     --background: var(--openforge-orange);
 
-    margin: 16px;
     width: 100%;
 }
 /* Phone Module */
@@ -55,14 +64,18 @@ section.phone {
     /* Needs to be set here in order to apply the % to the right module */
     /* If we set this properties at the top with the other ones, the % will apply to the full viewport instead the module */
     /* This are called local scope variables */
-    --device-height: 80%;
-    --device-width: 35%;
+    --device-height: 70vh;
+    --device-width: 20vw;
     /* This height and width are relatives to the viewport */
-    height: 100vh;
-    width: 75vw;
+    right: 22vw;
+    top: 14vh;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
 }
 div.phone-wrapper {
-    margin: 16px auto;
     /* This height and width are relatives to the Phone Module */
     height: var(--device-height);
     width: var(--device-width);
