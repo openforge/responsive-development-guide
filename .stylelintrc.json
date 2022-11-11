@@ -24,8 +24,63 @@
       "no-invalid-double-slash-comments": true,
       "length-zero-no-unit": true,
       "declaration-property-unit-disallowed-list": {
-        "width": ["rem", "em"],
-        "height": ["rem", "em"]
+        "width": ["rem", "em", "px"],
+        "height": ["rem", "em", "px"],
+        "font-size": ["px"]
+      },
+      "at-rule-no-unknown": null,
+      "scss/at-rule-no-unknown": [true],
+      "color-named": "always-where-possible",
+      "color-hex-length": "long",
+      "function-disallowed-list": ["hsl"],
+      "no-empty-source": null,
+      "declaration-block-no-duplicate-properties": [
+        true,
+        {
+          "ignore": ["consecutive-duplicates-with-different-values"]
+        }
+      ],
+      "declaration-empty-line-before": null,
+      "selector-pseudo-element-no-unknown": null,
+      "max-empty-lines": 1,
+      "no-duplicate-selectors": true,
+      "scss/dollar-variable-pattern": "^a-z\\d*$",
+      "scss/selector-no-redundant-nesting-selector": true,
+      "selector-class-pattern": [
+      "^[a-z0-9-]+(__[a-z0-9-]+)?(--[a-z0-9-]+)?$",
+      {
+      "message": "Please follow BEM naming conventions",
+      "resolveNestedSelectors": true
       }
+      ],
+      "selector-max-id": null,
+      "selector-type-no-unknown": null,
+      "string-quotes": "single",
+      "value-no-vendor-prefix": true,
+      "font-family-no-missing-generic-family-keyword": null,
+      "no-descending-specificity": null,
+      "selector-pseudo-class-no-unknown": [
+      true,
+      {
+      "ignorePseudoClasses": ["global"]
+      }
+      ],
+      "scss/at-import-partial-extension": null,
+      "scss/comment-no-empty": null,
+      "scss/double-slash-comment-empty-line-before": null,
+      "scss/at-extend-no-missing-placeholder": null,
+      "no-invalid-position-at-import-rule": null,
+      "rule-empty-line-before": null,
+      "selector-no-vendor-prefix": null,
+      "alpha-value-notation": null,
+      "color-function-notation": null,
+      "scss/no-global-function-names": null,
+      "value-keyword-case": null,
+      "scss/operator-no-unspaced": null,
+      "declaration-block-no-redundant-longhand-properties": null,
+      "keyframes-name-pattern": null,
+      "number-max-precision": null,
+      "scss/dollar-variable-empty-line-before": null,
+      "property-no-vendor-prefix": null
     }
 }
