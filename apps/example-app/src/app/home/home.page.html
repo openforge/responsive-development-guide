@@ -1,61 +1,95 @@
 <section class="main-section">
   <section class="sliders">
     <div class="sliders-wrappers">
-      <p>Document Module</p>
-      <ion-range min="10" max="20" step="1" value="16" (ionChange)="documentModuleValueChange($event.detail.value)">
-      </ion-range>
-      <p>Header Module</p>
-      <ion-range min="0.6" max="1.2" step="0.2" value="1.2" (ionChange)="headerModuleValueChange($event.detail.value)">
-      </ion-range>
-      <p>Content Module</p>
-      <ion-range min="0.6" max="2.0" step="0.2" value="1" (ionChange)="sectionModuleValueChange($event.detail.value)">
-      </ion-range>
-      <p>Footer Module</p>
-      <ion-range min="0.5" max="1.0" step="0.05" value="0.75"
-        (ionChange)="footerModuleValueChange($event.detail.value)">
-      </ion-range>
+      <div class="sliders-zone">
+        <p>Document Module</p>
+        <ion-range min="10" max="20" step="1" value="16" (ionChange)="documentModuleValueChange($event.detail.value)">
+        </ion-range>
+        <p>Header Module</p>
+        <ion-range min="0.6" max="1.2" step="0.2" value="1.2"
+          (ionChange)="headerModuleValueChange($event.detail.value)">
+        </ion-range>
+        <p>Content Module</p>
+        <ion-range min="0.6" max="2.0" step="0.2" value="1" (ionChange)="sectionModuleValueChange($event.detail.value)">
+        </ion-range>
+        <p>Footer Module</p>
+        <ion-range min="0.5" max="1.0" step="0.05" value="0.75"
+          (ionChange)="footerModuleValueChange($event.detail.value)">
+        </ion-range>
+        <ion-button id="click-trigger" (click)="presentPopover($event)">
+          Device Size
+        </ion-button>
+      </div>
     </div>
-    <ion-button id="click-trigger" (click)="presentPopover($event)">
-      Device Size
-    </ion-button>
   </section>
   <section class="phone">
     <div class="phone-wrapper">
       <ion-header>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel.
+          Styling components with REM
         </p>
       </ion-header>
       <ion-content>
-        <ion-card>
+        <ion-card class="openforge-card">
           <ion-card-header>
             <ion-card-title>
-              <p>Card Title</p>
+              <p>Hi there!</p>
             </ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
           </ion-card-header>
 
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            Welcome to the Openforge's responsive design simulation
+            <ion-button>Start Testing</ion-button>
           </ion-card-content>
         </ion-card>
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>
-            <ion-card-title>Card Title</ion-card-title>
-            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          </ion-card-header>
-
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
+        <div class="scrolling-cards">
+          <ion-card>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header>
+              <ion-card-title>Test 1</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header>
+              <ion-card-title>Test 2</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header>
+              <ion-card-title>Test 3</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header>
+              <ion-card-title>Test 4</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header>
+              <ion-card-title>Test 5</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </div>
+        <section class="footer">
+          <ion-tabs>
+            <ion-tab-bar slot="bottom">
+              <ion-tab-button tab="schedule">
+                <ion-label>Tab 1</ion-label>
+              </ion-tab-button>
+              <ion-tab-button tab="speakers">
+                <ion-label>Tab 2</ion-label>
+              </ion-tab-button>
+              <ion-tab-button tab="map">
+                <ion-label>Tab 3</ion-label>
+              </ion-tab-button>
+            </ion-tab-bar>
+          </ion-tabs>
+        </section>
       </ion-content>
-      <ion-footer>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel.
-        </p>
-      </ion-footer>
     </div>
   </section>
 </section>
