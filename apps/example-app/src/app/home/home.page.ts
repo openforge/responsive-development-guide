@@ -10,7 +10,7 @@ import { DevicesPopoverComponent } from './components/devices-popover/devices-po
     styleUrls: ['home.page.scss'],
 })
 export class HomePageComponent {
-    public devicePhoneSelected = 'iPhone X';
+    public devicePhoneSelected = 'Default Phone';
 
     // eslint-disable-next-line no-empty-function
     public constructor(public popoverController: PopoverController) {}
