@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
+import { DefaultPhoneLayoutModule } from './components/default-phone-layout/default-phone-layout.module';
+import { DevicesPopoverModule } from './components/devices-popover/devices-popover.module';
+import { SimulationDeviceContentModule } from './components/simulation-device-content/simulation-device-content.module';
 import { HomePageComponent } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
-import { PopoverComponent } from './popover.component';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
-    declarations: [HomePageComponent, PopoverComponent],
+    imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule, DevicesPopoverModule, SimulationDeviceContentModule, DefaultPhoneLayoutModule],
+    declarations: [HomePageComponent],
 })
 export class HomePageModule {}

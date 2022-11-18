@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 
-import { PopoverComponent } from './popover.component';
+import { DevicesPopoverComponent } from './components/devices-popover/devices-popover.component';
 
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
@@ -34,7 +34,7 @@ export class HomePageComponent {
 
     public async presentPopover(e: Event): Promise<void> {
         const popover = await this.popoverController.create({
-            component: PopoverComponent,
+            component: DevicesPopoverComponent,
             event: e,
         });
 
