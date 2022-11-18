@@ -10,6 +10,8 @@ import { DevicesPopoverComponent } from './components/devices-popover/devices-po
     styleUrls: ['home.page.scss'],
 })
 export class HomePageComponent {
+    public devicePhoneSelected = 'Default Phone';
+
     // eslint-disable-next-line no-empty-function
     public constructor(public popoverController: PopoverController) {}
 
@@ -40,10 +42,8 @@ export class HomePageComponent {
 
         void popover.onDidDismiss().then(response => {
             if (response.role === 'selected') {
-                const sizeData = response.data as { height: number; width: number };
-                const nodeList = Array.from(document.getElementsByClassName('phone') as HTMLCollectionOf<HTMLElement>);
-                nodeList.forEach(ele => ele.style.setProperty('--device-height', `${sizeData.height}px`));
-                nodeList.forEach(ele => ele.style.setProperty('--device-width', `${sizeData.width}px`));
+                const deviceSelected = response.data as string;
+                this.devicePhoneSelected = deviceSelected;
             }
         });
         await popover.present();

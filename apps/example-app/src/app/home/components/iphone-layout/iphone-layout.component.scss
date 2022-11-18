@@ -1,0 +1,77 @@
+/* Phone Module */
+section {
+    /* CSS Variables for device size */
+    /* Needs to be set here in order to apply the % to the right module */
+    /* If we set this properties at the top with the other ones, the % will apply to the full viewport instead the module */
+    /* This are called local scope variables */
+    --device-height: 65vh;
+    --device-width: 20vw;
+    /* This height and width are relatives to the viewport */
+    right: 22vw;
+    top: 18vh;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+}
+div.iphone {
+    /* This height and width are relatives to the Phone Module */
+    height: var(--device-height);
+    width: var(--device-width);
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 4vh 1vw;
+    background: #fff;
+    border: solid 2px #c5c5c5;
+    border-radius: 30px;
+    box-shadow: 0 3px 5px 0 rgb(50 50 50 / 25%);
+}
+div.iphone-inner {
+    /* This height and width are relatives to the Phone Module */
+    width: 100%;
+    height: 100%;
+    border: solid 2px #3b3b3b;
+}
+
+div.iphone .smallTopCirc {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 1%;
+    left: 50%;
+    position: absolute;
+    margin: 0 auto;
+    background: black;
+}
+div.iphone .camera {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: solid 1px #c5c5c5;
+    top: 3%;
+    left: 35%;
+    background: black;
+}
+div.iphone .oval {
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    top: 3.5%;
+    left: 42%;
+    border-radius: 2px;
+    background: black;
+}
+
+div.iphone .circButton {
+    background: #fff;
+    border: solid 2px #3b3b3b;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 1%;
+    left: 50%;
+}

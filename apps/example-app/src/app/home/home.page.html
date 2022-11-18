@@ -17,12 +17,15 @@
           (ionChange)="footerModuleValueChange($event.detail.value)">
         </ion-range>
         <ion-button id="click-trigger" (click)="presentPopover($event)">
-          Device Size
+          {{ devicePhoneSelected }}
         </ion-button>
       </div>
     </div>
   </section>
-  <openforge-default-phone-layout>
+  <openforge-default-phone-layout *ngIf="devicePhoneSelected === 'Default Phone'">
     <openforge-simulation-device-content></openforge-simulation-device-content>
   </openforge-default-phone-layout>
+  <openforge-iphone-layout *ngIf="devicePhoneSelected === 'iPhone 6'">
+    <openforge-simulation-device-content></openforge-simulation-device-content>
+  </openforge-iphone-layout>
 </section>

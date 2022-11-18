@@ -10,7 +10,7 @@ export class DevicesPopoverComponent {
     // eslint-disable-next-line no-empty-function
     public constructor(public popoverController: PopoverController) {}
 
-    public sizeselected(width: number, height: number): void {
-        void this.popoverController.dismiss({ width, height }, 'selected');
+    public selectDevice(device: string): void {
+        void this.popoverController.dismiss(device, 'selected');
     }
 }
