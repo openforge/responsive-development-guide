@@ -71,11 +71,6 @@ ion-content .scrolling-cards ion-card {
 }
 /* Footer Module */
 ion-content section.footer {
-    padding: 10px;
-    background-color: #e7e7e7;
-    /* This height and width are relatives to the Phone Module */
-    height: 5%;
-    width: 100%;
     /* This font size will scale with document */
     /* If we change this one manually only will impact in the Footer module */
     font-size: var(--footer-module-font-size);
