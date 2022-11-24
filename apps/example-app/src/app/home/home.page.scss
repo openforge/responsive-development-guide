@@ -18,7 +18,7 @@ section.main-section {
 section.sliders {
     /* This height and width are relatives to the viewport */
     height: 100vh;
-    width: 60vw;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -31,7 +31,12 @@ section.sliders {
         */
         /* Since we want the text on the sliders section not be modified we need to disable the stylelint to be able to use px */
         font-size: 16px; /* stylelint-disable-line */
+        color: #000000
     }
+}
+ion-icon {
+  font-size:20px;
+  vertical-align: middle;
 }
 div.sliders-wrappers {
     /* This height and width are relatives to the Sliders Module */
@@ -45,6 +50,18 @@ div.sliders-zone {
     /* This height and width are relatives to the Parent */
     height: 100%;
     width: 50%;
+}
+div.device-header {
+  width:100%;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: start;
+  p {
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 ion-range {
     --bar-background: var(--openforge-orange-lighter-25);
@@ -64,8 +81,9 @@ section.phone {
     /* Needs to be set here in order to apply the % to the right module */
     /* If we set this properties at the top with the other ones, the % will apply to the full viewport instead the module */
     /* This are called local scope variables */
-    --device-height: 70vh;
-    --device-width: 20vw;
+    /* Default to Iphone 7 height and width */
+    --device-height: 667px;
+    --device-width: 375px;
     /* This height and width are relatives to the viewport */
     right: 22vw;
     top: 14vh;
@@ -73,7 +91,7 @@ section.phone {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: absolute;
+    position: sticky;
 }
 div.phone-wrapper {
     /* This height and width are relatives to the Phone Module */
