@@ -1,23 +1,26 @@
 <section class="main-section">
   <section class="sliders">
     <div class="sliders-wrappers">
+      <div class="device-header">
+        <p>Device: {{ deviceSelected }}</p>
+      </div>
       <div class="sliders-zone">
-        <p>Document Module</p>
+        <p> <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Document')"></ion-icon> Document Module</p>
         <ion-range min="10" max="20" step="1" value="16" (ionChange)="documentModuleValueChange($event.detail.value)">
         </ion-range>
-        <p>Header Module</p>
+        <p> <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Header')"></ion-icon> Header Module</p>
         <ion-range min="0.6" max="1.2" step="0.2" value="1.2"
           (ionChange)="headerModuleValueChange($event.detail.value)">
         </ion-range>
-        <p>Content Module</p>
+        <p> <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Content')"></ion-icon> Content Module</p>
         <ion-range min="0.6" max="2.0" step="0.2" value="1" (ionChange)="sectionModuleValueChange($event.detail.value)">
         </ion-range>
-        <p>Footer Module</p>
+        <p> <ion-icon name="information-circle-outline" value="'Footer Module MOdifier'" (click)="presentTooltip($event, 'Footer')"></ion-icon> Footer Module</p>
         <ion-range min="0.5" max="1.0" step="0.05" value="0.75"
           (ionChange)="footerModuleValueChange($event.detail.value)">
         </ion-range>
         <ion-button id="click-trigger" (click)="presentPopover($event)">
-          Device Size
+          Change Device Size
         </ion-button>
       </div>
     </div>
