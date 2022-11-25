@@ -1,0 +1,81 @@
+:root {
+    /* CSS Variables for each module */
+    /* This are called global scope variables */
+    --header-module-font-size: 1.2rem;
+    --section-module-font-size: 1rem;
+    --cards-components-font-size: 1rem;
+    --footer-module-font-size: 0.75rem;
+}
+/* Header Module */
+ion-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #0c699e;
+    /* This height and width are relatives to the Phone Module */
+    height: 7.5%;
+    width: 100%;
+    /* This font size will scale with document */
+    /* If we change this one manually only will impact in the Header module */
+    font-size: var(--header-module-font-size);
+    p {
+        /* This font size will scale with Header module */
+        font-size: 1em;
+    }
+}
+/* Content Module */
+ion-content {
+    /* This height and width are relatives to the Phone Module */
+    height: 92.5%;
+    width: 100%;
+    /* This font size will scale with document */
+    /* If we change this one manually only will impact in the Content module */
+    font-size: var(--section-module-font-size);
+}
+ion-card {
+    /* This font size will scale with document */
+    /* If we change this one manually only will impact in the Cards components */
+    /* Ion Cards needs the font size directly here, the content module font size change not apply here */
+    font-size: var(--cards-components-font-size);
+}
+ion-card.openforge-card {
+    --background: var(--openforge-orange);
+
+    color: white;
+}
+ion-card.openforge-card ion-button {
+    --background: #00cccc;
+
+    width: 60%;
+}
+ion-card ion-card-title {
+    font-size: 1.2em;
+}
+ion-card ion-card-subtitle {
+    font-size: 1em;
+}
+ion-card ion-card-content {
+    font-size: 1.1em;
+}
+ion-content .scrolling-cards {
+    display: flex;
+    /* This height and width are relatives to the viewport */
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: scroll;
+}
+ion-content .scrolling-cards ion-card {
+    /* This height and width are relatives to the Parent */
+    width: 10%;
+}
+/* Footer Module */
+ion-content section.footer {
+    /* This font size will scale with document */
+    /* If we change this one manually only will impact in the Footer module */
+    font-size: var(--footer-module-font-size);
+    ion-tab-button {
+        /* This font size will scale with Footer module */
+        font-size: 0.8em;
+    }
+}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 
-import { PopoverComponent } from './popover.component';
+import { DevicesPopoverComponent } from './components/devices-popover/devices-popover.component';
 import { TooltipComponent } from './tooltip.component';
 
 @Component({
@@ -11,7 +11,7 @@ import { TooltipComponent } from './tooltip.component';
     styleUrls: ['home.page.scss'],
 })
 export class HomePageComponent {
-    public deviceSelected = 'Iphone 7';
+    public devicePhoneSelected = 'Default Phone';
 
     // eslint-disable-next-line no-empty-function
     public constructor(public popoverController: PopoverController) {}
@@ -68,20 +68,14 @@ export class HomePageComponent {
 
     public async presentPopover(e: Event): Promise<void> {
         const popover = await this.popoverController.create({
-            component: PopoverComponent,
+            component: DevicesPopoverComponent,
             event: e,
-            componentProps: {
-                currentDevice: this.deviceSelected,
-            },
         });
 
         void popover.onDidDismiss().then(response => {
             if (response.role === 'selected') {
-                const sizeData = response.data as { height: number; width: number; device: string };
-                this.deviceSelected = sizeData.device;
-                const nodeList = Array.from(document.getElementsByClassName('phone') as HTMLCollectionOf<HTMLElement>);
-                nodeList.forEach(ele => ele.style.setProperty('--device-height', `${sizeData.height}px`));
-                nodeList.forEach(ele => ele.style.setProperty('--device-width', `${sizeData.width}px`));
+                const deviceSelected = response.data as string;
+                this.devicePhoneSelected = deviceSelected;
             }
         });
         await popover.present();
