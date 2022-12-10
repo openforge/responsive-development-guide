@@ -38,13 +38,3 @@ html {
     /* If we change this one manually will impact in all the modules */
     font-size: var(--document-font-size);
 }
-@media (max-width: 900px) {
-    html {
-        font-size: var(--document-font-size-900);
-    }
-}
-@media (max-width: 400px) {
-    html {
-        font-size: var(--document-font-size-400);
-    }
-}

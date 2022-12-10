@@ -1,95 +1,34 @@
-<section class="main-section">
+<section>
   <section class="sliders">
     <div class="sliders-wrappers">
       <div class="sliders-zone">
-        <p>Document Module</p>
+        <p> <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Document')"></ion-icon> Document Module</p>
         <ion-range min="10" max="20" step="1" value="16" (ionChange)="documentModuleValueChange($event.detail.value)">
         </ion-range>
-        <p>Header Module</p>
+        <p> <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Header')"></ion-icon> Header Module</p>
         <ion-range min="0.6" max="1.2" step="0.2" value="1.2"
           (ionChange)="headerModuleValueChange($event.detail.value)">
         </ion-range>
-        <p>Content Module</p>
+        <p> <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Content')"></ion-icon> Content Module</p>
         <ion-range min="0.6" max="2.0" step="0.2" value="1" (ionChange)="sectionModuleValueChange($event.detail.value)">
         </ion-range>
-        <p>Footer Module</p>
+        <p> <ion-icon name="information-circle-outline" value="'Footer Module MOdifier'" (click)="presentTooltip($event, 'Footer')"></ion-icon> Footer Module</p>
         <ion-range min="0.5" max="1.0" step="0.05" value="0.75"
           (ionChange)="footerModuleValueChange($event.detail.value)">
         </ion-range>
         <ion-button id="click-trigger" (click)="presentPopover($event)">
-          Device Size
+          {{ devicePhoneSelected }}
         </ion-button>
       </div>
     </div>
   </section>
-  <section class="phone">
-    <div class="phone-wrapper">
-      <ion-header>
-        <p>
-          Styling components with REM
-        </p>
-      </ion-header>
-      <ion-content>
-        <ion-card class="openforge-card">
-          <ion-card-header>
-            <ion-card-title>
-              <p>Hi there!</p>
-            </ion-card-title>
-          </ion-card-header>
-
-          <ion-card-content>
-            Welcome to the Openforge's responsive design simulation
-            <ion-button>Start Testing</ion-button>
-          </ion-card-content>
-        </ion-card>
-        <div class="scrolling-cards">
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-title>Test 1</ion-card-title>
-            </ion-card-header>
-          </ion-card>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-title>Test 2</ion-card-title>
-            </ion-card-header>
-          </ion-card>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-title>Test 3</ion-card-title>
-            </ion-card-header>
-          </ion-card>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-title>Test 4</ion-card-title>
-            </ion-card-header>
-          </ion-card>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-title>Test 5</ion-card-title>
-            </ion-card-header>
-          </ion-card>
-        </div>
-        <section class="footer">
-          <ion-tabs>
-            <ion-tab-bar slot="bottom">
-              <ion-tab-button tab="schedule">
-                <ion-label>Tab 1</ion-label>
-              </ion-tab-button>
-              <ion-tab-button tab="speakers">
-                <ion-label>Tab 2</ion-label>
-              </ion-tab-button>
-              <ion-tab-button tab="map">
-                <ion-label>Tab 3</ion-label>
-              </ion-tab-button>
-            </ion-tab-bar>
-          </ion-tabs>
-        </section>
-      </ion-content>
-    </div>
-  </section>
+  <openforge-default-phone-layout *ngIf="devicePhoneSelected === 'Default Phone'">
+    <openforge-simulation-device-content></openforge-simulation-device-content>
+  </openforge-default-phone-layout>
+  <openforge-iphone-layout *ngIf="devicePhoneSelected === 'iPhone 6'">
+    <openforge-simulation-device-content></openforge-simulation-device-content>
+  </openforge-iphone-layout>
+  <openforge-iphone-x-layout *ngIf="devicePhoneSelected === 'iPhone X'">
+    <openforge-simulation-device-content></openforge-simulation-device-content>
+  </openforge-iphone-x-layout>
 </section>

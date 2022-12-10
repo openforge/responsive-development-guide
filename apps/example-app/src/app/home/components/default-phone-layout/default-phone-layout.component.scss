@@ -1,0 +1,26 @@
+/* Phone Module */
+section.phone {
+    /* CSS Variables for device size */
+    /* Needs to be set here in order to apply the % to the right module */
+    /* If we set this properties at the top with the other ones, the % will apply to the full viewport instead the module */
+    /* This are called local scope variables */
+    --device-height: 70vh;
+    --device-width: 15vw;
+    /* This height and width are relatives to the viewport */
+    right: 22vw;
+    top: 14vh;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+}
+div.phone-wrapper {
+    /* This height and width are relatives to the Phone Module */
+    height: var(--device-height);
+    width: var(--device-width);
+    border-radius: 40px;
+    border: 4px solid #31393e;
+    overflow: hidden;
+    box-shadow: inset 0 0 40px 5px rgba(255, 255, 255, 0.2);
+}
