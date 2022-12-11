@@ -88,14 +88,11 @@
       }
     },
     "lint-staged": {
-        "*.js": [
-            "eslint --fix"
-        ],
-        "*.ts": [
-            "eslint --fix"
-        ],
-        "*.html": [
-            "eslint --fix"
-        ]
+      "*.{js,ts,html}": [
+          "eslint --fix"
+      ],
+      "*.{css,scss}": [
+          "stylelint --fix"
+      ]
     }
 }
