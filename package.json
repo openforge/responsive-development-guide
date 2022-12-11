@@ -83,16 +83,16 @@
         "*.spec.ts"
     ],
     "husky": {
-      "hooks": {
-          "pre-commit": "lint-staged"
-      }
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
     },
     "lint-staged": {
-      "*.{js,ts,html}": [
-          "eslint --fix"
-      ],
-      "*.{css,scss}": [
-          "stylelint --fix"
-      ]
+        "*.{js,ts,html}": [
+            "eslint --fix"
+        ],
+        "*.{css,scss}": [
+            "stylelint --fix"
+        ]
     }
 }
