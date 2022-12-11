@@ -1,72 +1,59 @@
 p {
-    margin: 0;
+    margin: 0; // removes spacing between document module and sliders
+    font-size: 0.8rem;
 }
-/* Main Section */
-section {
-    background-color: #f4f6f9;
-}
-/* Sliders Module */
-section.sliders {
+
+.flex-container {
     /* This height and width are relatives to the viewport */
-    height: 100vh;
+    display: flex;
+    height: 50vh;
     width: 50vw;
+    /* The margins center the content */
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+    background-color: white;
+}
+
+.right-column {
+    background-color: white;
+}
+
+.left-column {
+    width: 40%; // of parent (flex-container)
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0 0.5rem 0.8rem -0.4rem rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
     justify-content: center;
-    margin: auto;
     p {
-        /* This font size is overriding the variable in order to not be modified when updating the document font size
-        since this text is not needed to be responsive
+        /* Since the sliders affect root font-size, that also affects this component.
+        So lets override font-size here manually so that the slider font size stays the same.
         */
-        /* Since we want the text on the sliders section not be modified we need to disable the stylelint to be able to use px */
         /* stylelint-disable */
         font-size: 16px;
         /* stylelint-enable */
-        color: black;
     }
 }
+
 ion-icon {
     font-size: 1.25rem;
     vertical-align: middle;
 }
 
-div.sliders-wrappers {
-    /* This height and width are relatives to the Sliders Module */
-    width: 100%;
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.75);
-}
-
-div.sliders-zone {
-    /* This height and width are relatives to the Parent */
-    height: 100%;
-    width: 50%;
-}
-div.device-header {
-    width: 100%;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    display: flex;
-    justify-content: start;
-
-    p {
-        font-weight: bold;
-        font-size: 1.25rem;
-    }
-}
 ion-range {
     --bar-background: var(--openforge-orange-lighter-25);
     --bar-background-active: var(--openforge-orange);
-
     padding-left: 0;
     padding-right: 0;
 }
+
 ion-button {
     --background: var(--openforge-orange);
+    font-size: 1rem;
     width: 100%;
 }

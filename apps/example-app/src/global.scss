@@ -30,6 +30,12 @@ Is to be the ONLY place for media queries.
     --document-font-size: 16px;
     --document-font-size-900: 13px;
     --document-font-size-400: 10px;
+    /* CSS Variables for each module */
+    /* This are called global scope variables */
+    --header-module-font-size: 1.2rem;
+    --section-module-font-size: 1rem;
+    --cards-components-font-size: 1rem;
+    --footer-module-font-size: 0.75rem;
     --openforge-orange: #e78112;
     --openforge-orange-lighter-25: #f19f47;
 }
