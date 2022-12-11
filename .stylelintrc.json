@@ -1,17 +1,6 @@
 {
     "ignoreFiles": ["**/variables.scss"],
-    "overrides": [
-        {
-            "files": ["**/*.css"],
-            "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
-            "rules": {}
-        },
-        {
-            "files": ["**/*.scss"],
-            "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
-            "rules": {}
-        }
-    ],
+    "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
     "rules": {
       "number-leading-zero": "always",
       "comment-empty-line-before": "never",
