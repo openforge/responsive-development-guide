@@ -22,27 +22,35 @@ p {
 
 .left-column {
     width: 40%; // of parent (flex-container)
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 0 0.5rem 0.8rem -0.4rem rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 6px 12px -5px rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     position: relative;
     align-items: center;
     justify-content: center;
     p {
+        width: 100%; // of parent (left-container)
         /* Since the sliders affect root font-size, that also affects this component.
         So lets override font-size here manually so that the slider font size stays the same.
         */
         /* stylelint-disable */
         font-size: 16px;
         /* stylelint-enable */
+        cursor: default;
     }
 }
 
 ion-icon {
-    font-size: 1.25rem;
+    /* Since the sliders affect root font-size, that also affects this component.
+        So lets override font-size here manually so that the slider font size stays the same.
+        */
+    /* stylelint-disable */
+    font-size: 16px;
+    /* stylelint-enable */
     vertical-align: middle;
+    cursor: pointer;
 }
 
 ion-range {
@@ -54,6 +62,11 @@ ion-range {
 
 ion-button {
     --background: var(--openforge-orange);
-    font-size: 1rem;
+    /* Since the sliders affect root font-size, that also affects this component.
+        So lets override font-size here manually so that the slider font size stays the same.
+        */
+    /* stylelint-disable */
+    font-size: 16px;
+    /* stylelint-enable */
     width: 100%;
 }
