@@ -1,32 +1,32 @@
-<ion-header>
-    <p>Ion-Header</p>
+<ion-header [ngClass]="{'header-radius': borderRadius}">
+  <p>Ion-Header</p>
 </ion-header>
 <ion-content>
-    <!-- ORANGE CARD-->
-    <ion-card class="openforge-card">
-        <ion-card-header>
-            <ion-card-title>
-                <p>Hi Developer!</p>
-            </ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            Toggle the sizes on the left to see how they respond
-            <ion-button> Example Button </ion-button>
-        </ion-card-content>
-    </ion-card>
-    <section class="footer">
-        <ion-tabs>
-            <ion-tab-bar slot="bottom">
-                <ion-tab-button tab="schedule">
-                    <ion-label>Tab 1</ion-label>
-                </ion-tab-button>
-                <ion-tab-button tab="speakers">
-                    <ion-label>Tab 2</ion-label>
-                </ion-tab-button>
-                <ion-tab-button tab="map">
-                    <ion-label>Tab 3</ion-label>
-                </ion-tab-button>
-            </ion-tab-bar>
-        </ion-tabs>
-    </section>
+  <!-- ORANGE CARD-->
+  <ion-card class="openforge-card">
+    <ion-card-header>
+      <ion-card-title>
+        <p>Hi Developer!</p>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Toggle the sizes on the left to see how they respond
+      <ion-button> Example Button </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <section class="footer">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" [ngClass]="{'footer-radius': borderRadius}">
+        <ion-tab-button tab="schedule">
+          <ion-label>Tab 1</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="speakers">
+          <ion-label>Tab 2</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="map">
+          <ion-label>Tab 3</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </section>
 </ion-content>

@@ -4,7 +4,6 @@ ion-header {
     justify-content: center;
     color: white;
     background-color: #0c699e;
-    border-radius: 2rem 2rem 0 0;
     /* This height and width are relatives to the Phone Module */
     height: 7.5%;
     width: 100%;
@@ -14,7 +13,11 @@ ion-header {
     p {
         /* This font size will scale with Header module */
         font-size: 1em;
+        cursor: default;
     }
+}
+.header-radius {
+    border-radius: 2rem 2rem 0 0;
 }
 /* Content Module */
 ion-content {
@@ -57,10 +60,8 @@ ion-card-content {
     ion-tab-button {
         /* This font size will scale with Footer module */
         font-size: 1rem;
-        border-radius: 0 0 2rem 2rem;
     }
-    ion-tab-bar {
-        border-radius: 0 0 2rem 2rem;
-    }
+}
+.footer-radius {
     border-radius: 0 0 2rem 2rem;
 }
