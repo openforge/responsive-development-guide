@@ -6,24 +6,25 @@ p {
 .flex-container {
     /* This height and width are relatives to the viewport */
     display: flex;
-    height: 50vh;
-    width: 50vw;
+    height: 70vh;
     /* The margins center the content */
-    margin-left: 25vw;
-    margin-right: 25vw;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
     background-color: white;
 }
 
 .right-column {
     background-color: white;
+    width: 45vw;
 }
 
 .left-column {
-    width: 40%; // of parent (flex-container)
-    padding: 10px;
-    margin: 10px;
+    width: 45vw;
+    padding: 0.8rem;
+    margin: 0.8rem;
     box-shadow: 0 6px 12px -5px rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
@@ -33,7 +34,7 @@ p {
     p {
         width: 100%; // of parent (left-container)
         /* Since the sliders affect root font-size, that also affects this component.
-        So lets override font-size here manually so that the slider font size stays the same.
+        So lets override font-size here manually so that the font size stays the same.
         */
         /* stylelint-disable */
         font-size: 16px;
@@ -44,7 +45,7 @@ p {
 
 ion-icon {
     /* Since the sliders affect root font-size, that also affects this component.
-        So lets override font-size here manually so that the slider font size stays the same.
+        So lets override font-size here manually so that the font size stays the same.
         */
     /* stylelint-disable */
     font-size: 16px;
@@ -63,7 +64,7 @@ ion-range {
 ion-button {
     --background: var(--openforge-orange);
     /* Since the sliders affect root font-size, that also affects this component.
-        So lets override font-size here manually so that the slider font size stays the same.
+        So lets override font-size here manually so that the font size stays the same.
         */
     /* stylelint-disable */
     font-size: 16px;
