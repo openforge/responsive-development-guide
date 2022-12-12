@@ -1,23 +1,8 @@
 /* Phone Module */
-section {
-    /* CSS Variables for device size */
-    /* Needs to be set here in order to apply the % to the right module */
-    /* If we set this properties at the top with the other ones, the % will apply to the full viewport instead the module */
-    /* This are called local scope variables */
-    --device-height: 694px;
-    --device-width: 342px;
-    position: absolute;
-    right: 22vw;
-    top: 12vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    z-index: 2;
-}
-div.iphone {
+.iphone {
     /* This height and width are the Phone Module */
-    height: var(--device-height);
-    width: var(--device-width);
+    height: 694px;
+    width: 342px;
     position: relative;
     overflow: hidden;
     padding: 5px 8px;
@@ -26,7 +11,7 @@ div.iphone {
     border-radius: 30px;
     box-shadow: 0 3px 5px 0 rgb(50 50 50 / 25%);
 }
-div.iphone-inner {
+.iphone-inner {
     /* This height and width are relatives to the Phone Module */
     width: 100%;
     height: 100%;
@@ -34,7 +19,7 @@ div.iphone-inner {
     overflow: hidden;
     border: 2px solid #e2e3e4;
 }
-div.iphone .header {
+.header {
     position: absolute;
     top: 0;
     left: 25%;
@@ -46,41 +31,41 @@ div.iphone .header {
     border-bottom-right-radius: 16px;
     border-bottom-left-radius: 16px;
 }
-div.iphone .header .sensor-1,
-div.iphone .header .sensor-2,
-div.iphone .header .sensor-3,
-div.iphone .header .sensor-4 {
+.sensor-1,
+.sensor-2,
+.sensor-3,
+.sensor-4 {
     position: absolute;
     border-radius: 100%;
     background: black;
 }
-div.iphone .header .sensor-1,
-div.iphone .header .sensor-4 {
+.sensor-1,
+.sensor-4 {
     top: 6px;
     /* This height and width are relatives to the Phone Module */
     height: 50%;
     width: 6%;
 }
-div.iphone .header .sensor-2,
-div.iphone .header .sensor-3 {
+.sensor-2,
+.sensor-3 {
     top: 7px;
     /* This height and width are relatives to the Phone Module */
     height: 40%;
     width: 5%;
 }
-div.iphone .header .sensor-1 {
+.sensor-1 {
     left: 10px;
 }
-div.iphone .header .sensor-2 {
+.sensor-2 {
     left: 32px;
 }
-div.iphone .header .sensor-3 {
+.sensor-3 {
     right: 32px;
 }
-div.iphone .header .sensor-4 {
+.sensor-4 {
     right: 10px;
 }
-div.iphone .header .line {
+.line {
     position: absolute;
     top: 9px;
     left: 48px;

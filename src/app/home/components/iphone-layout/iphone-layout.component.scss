@@ -1,24 +1,8 @@
 /* Phone Module */
-section {
-    /* CSS Variables for device size */
-    /* Needs to be set here in order to apply the % to the right module */
-    /* If we set this properties at the top with the other ones, the % will apply to the full viewport instead the module */
-    /* This are called local scope variables */
-    --device-height: 500px;
-    --device-width: 260px;
-    position: absolute;
-    right: 22vw;
-    top: 25vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    z-index: 2;
-}
-
 .iphone {
     /* This height and width are the Phone Module */
-    height: var(--device-height);
-    width: var(--device-width);
+    height: 500px;
+    width: 260px;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
@@ -35,7 +19,7 @@ section {
     height: 100%;
     border: solid 1px #3b3b3b;
 }
-div.iphone .top-circle {
+.top-circle {
     position: absolute;
     top: 1%;
     left: 50%;
@@ -45,7 +29,7 @@ div.iphone .top-circle {
     border-radius: 50%;
     background: black;
 }
-div.iphone .camera {
+.camera {
     position: absolute;
     top: 3%;
     left: 35%;
@@ -56,7 +40,7 @@ div.iphone .camera {
     border: solid 1px #c5c5c5;
     background: black;
 }
-div.iphone .oval {
+.oval {
     position: absolute;
     top: 3.8%;
     left: 42%;
@@ -66,7 +50,7 @@ div.iphone .oval {
     border-radius: 2px;
     background: black;
 }
-div.iphone .bottom-circle {
+.bottom-circle {
     position: absolute;
     bottom: 0.5%;
     left: 45.5%;
