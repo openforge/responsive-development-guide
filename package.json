@@ -1,75 +1,69 @@
 {
-    "name": "angular",
-    "version": "0.0.0",
-    "private": true,
-    "scripts": {
-        "ng": "ng",
-        "start": "ng serve",
-        "build": "ng build",
-        "test": "ng test",
-        "lint": "ng lint",
-        "e2e": "ng e2e",
-        "postinstall": "ngcc --properties es2015 browser module main",
-        "prepare": "husky install"
-    },
-    "dependencies": {
-        "@angular/animations": "^14.0.0",
-        "@angular/common": "^14.0.0",
-        "@angular/compiler": "^14.0.0",
-        "@angular/core": "^14.0.0",
-        "@angular/forms": "^14.0.0",
-        "@angular/platform-browser": "^14.0.0",
-        "@angular/platform-browser-dynamic": "^14.0.0",
-        "@angular/router": "^14.0.0",
-        "@ionic/angular": "^6.3.8",
-        "rxjs": "~7.5.0",
-        "tslib": "^2.3.0",
-        "zone.js": "~0.11.4"
-    },
-    "devDependencies": {
-        "@angular-devkit/build-angular": "^14.0.0",
-        "@angular/cli": "~14.0.0",
-        "@angular/compiler-cli": "^14.0.0",
-        "@types/jest": "27.0.2",
-        "@types/node": "14.14.33",
-        "@typescript-eslint/eslint-plugin": "~4.33.0",
-        "@typescript-eslint/parser": "~4.33.0",
-        "babel-eslint": "^10.1.0",
-        "eslint": "7.32.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-cypress": "^2.10.3",
-        "eslint-plugin-html": "^6.2.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "husky": "^7.0.4",
-        "jasmine-core": "~4.1.0",
-        "karma": "~6.3.0",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage": "~2.2.0",
-        "karma-jasmine": "~5.0.0",
-        "karma-jasmine-html-reporter": "~1.7.0",
-        "lint-staged": "^12.1.1",
-        "prettier": "2.4.1",
-        "prettier-eslint": "^8.8.2",
-        "stylelint": "^14.0.0",
-        "stylelint-config-prettier": "^8.0.0",
-        "stylelint-config-standard": "^23.0.0",
-        "stylelint-config-standard-scss": "^2.0.0",
-        "typescript": "~4.7.2"
-    },
-    "eslintIgnore": [
-        "*.spec.ts"
-    ],
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.{js,ts,html}": [
-            "eslint --fix"
-        ],
-        "*.{css,scss}": [
-            "stylelint --fix"
-        ]
-    }
+  "name": "angular",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e",
+      "postinstall": "ngcc --properties es2015 browser module main",
+      "prepare": "husky install"
+  },
+  "dependencies": {
+      "@angular/animations": "^15.0.3",
+      "@angular/common": "^15.0.3",
+      "@angular/compiler": "^15.0.3",
+      "@angular/core": "^15.0.3",
+      "@angular/forms": "^15.0.3",
+      "@angular/platform-browser": "^15.0.3",
+      "@angular/platform-browser-dynamic": "^15.0.3",
+      "@angular/router": "^15.0.3",
+      "@ionic/angular": "^6.4.0",
+      "rxjs": "^7.6.0",
+      "tslib": "^2.4.1",
+      "zone.js": "^0.12.0"
+  },
+  "devDependencies": {
+      "@angular-devkit/build-angular": "^15.0.3",
+      "@angular/cli": "~15.0.3",
+      "@angular/compiler-cli": "^15.0.3",
+      "@types/jest": "27.0.2",
+      "@types/node": "14.14.33",
+      "@typescript-eslint/eslint-plugin": "~4.33.0",
+      "@typescript-eslint/parser": "~4.33.0",
+      "babel-eslint": "^10.1.0",
+      "eslint": "7.32.0",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-cypress": "^2.10.3",
+      "eslint-plugin-html": "^6.2.0",
+      "eslint-plugin-prettier": "^4.0.0",
+      "husky": "^7.0.4",
+      "jasmine-core": "~4.1.0",
+      "karma": "~6.3.0",
+      "karma-chrome-launcher": "~3.1.0",
+      "karma-coverage": "~2.2.0",
+      "karma-jasmine": "~5.0.0",
+      "karma-jasmine-html-reporter": "~1.7.0",
+      "lint-staged": "^12.1.1",
+      "prettier": "2.4.1",
+      "prettier-eslint": "^8.8.2",
+      "stylelint": "^14.0.0",
+      "stylelint-config-prettier": "^8.0.0",
+      "stylelint-config-standard": "^23.0.0",
+      "stylelint-config-standard-scss": "^2.0.0",
+      "typescript": "~4.8.2"
+  },
+  "eslintIgnore": ["*.spec.ts"],
+  "husky": {
+      "hooks": {
+          "pre-commit": "lint-staged"
+      }
+  },
+  "lint-staged": {
+      "*.{js,ts,html}": ["eslint --fix"],
+      "*.{css,scss}": ["stylelint --fix"]
+  }
 }
