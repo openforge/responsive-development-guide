@@ -21,7 +21,7 @@ export class HomePageComponent {
         console.log('home.page.ts', 'constructor()');
     }
 
-    public documentModuleValueChange(event): void {
+    public documentModuleValueChange(event: { detail: { value: string } }): void {
         const value = event.detail.value;
         this.rootFontSize = value as unknown as number;
         document.documentElement.style.setProperty('--document-font-size', `${value}px`);
@@ -29,20 +29,20 @@ export class HomePageComponent {
         document.documentElement.style.setProperty('--document-font-size-400', `${+value - 6}px`);
     }
 
-    public headerModuleValueChange(event): void {
+    public headerModuleValueChange(event: { detail: { value: string } }): void {
         const value = event.detail.value;
         this.headerRem = value as unknown as number;
         document.documentElement.style.setProperty('--header-module-font-size', `${value}rem`);
     }
 
-    public contentModuleValueChange(event): void {
+    public contentModuleValueChange(event: { detail: { value: string } }): void {
         const value = event.detail.value;
         this.contentRem = value as unknown as number;
         document.documentElement.style.setProperty('--section-module-font-size', `${value}rem`);
         document.documentElement.style.setProperty('--cards-components-font-size', `${value}rem`);
     }
 
-    public footerModuleValueChange(event): void {
+    public footerModuleValueChange(event: { detail: { value: string } }): void {
         const value = event.detail.value;
         this.footerRem = value as unknown as number;
         document.documentElement.style.setProperty('--footer-module-font-size', `${value}rem`);
