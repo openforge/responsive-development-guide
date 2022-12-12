@@ -1,13 +1,4 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
+/* Add application styles & imports to this file! */
 /* Core CSS required for Ionic components to work properly */
 @import '~@ionic/angular/css/core.css';
 /* Basic CSS for apps built with Ionic */
@@ -21,11 +12,7 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
-/*
-Fernando & Carlos Rocha
-GOAL OF THIS FILE
-Is to be the ONLY place for media queries.
-*/
+
 :root {
     --document-font-size: 16px;
     --document-font-size-900: 13px;

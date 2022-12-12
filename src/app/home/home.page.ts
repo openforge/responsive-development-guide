@@ -21,25 +21,29 @@ export class HomePageComponent {
         console.log('home.page.ts', 'constructor()');
     }
 
-    public documentModuleValueChange(value: string): void {
+    public documentModuleValueChange(event): void {
+        const value = event.detail.value;
         this.rootFontSize = value as unknown as number;
         document.documentElement.style.setProperty('--document-font-size', `${value}px`);
         document.documentElement.style.setProperty('--document-font-size-900', `${+value - 3}px`);
         document.documentElement.style.setProperty('--document-font-size-400', `${+value - 6}px`);
     }
 
-    public headerModuleValueChange(value: string): void {
+    public headerModuleValueChange(event): void {
+        const value = event.detail.value;
         this.headerRem = value as unknown as number;
         document.documentElement.style.setProperty('--header-module-font-size', `${value}rem`);
     }
 
-    public contentModuleValueChange(value: string): void {
+    public contentModuleValueChange(event): void {
+        const value = event.detail.value;
         this.contentRem = value as unknown as number;
         document.documentElement.style.setProperty('--section-module-font-size', `${value}rem`);
         document.documentElement.style.setProperty('--cards-components-font-size', `${value}rem`);
     }
 
-    public footerModuleValueChange(value: string): void {
+    public footerModuleValueChange(event): void {
+        const value = event.detail.value;
         this.footerRem = value as unknown as number;
         document.documentElement.style.setProperty('--footer-module-font-size', `${value}rem`);
     }
