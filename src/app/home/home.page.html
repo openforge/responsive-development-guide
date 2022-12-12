@@ -1,0 +1,48 @@
+<div class="flex-container">
+    <div class="left-column">
+        <p>
+            <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Document')"></ion-icon>
+            Document Root<br />
+            <i>Font-size: {{ rootFontSize }}px</i>
+            <ion-range min="10" max="20" step="1" value="16" (ionChange)="documentModuleValueChange($event)"> </ion-range>
+        </p>
+
+        <p>
+            <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Header')"></ion-icon>
+            Header Module: <br />
+            <i>{{ headerRem | number: '1.2-2' }}rem = {{ headerRem * rootFontSize | number: '1.2-2' }}px</i>
+            <ion-range min="0.6" max="1.6" step="0.2" value="1" (ionChange)="headerModuleValueChange($event)"> </ion-range>
+        </p>
+
+        <p>
+            <ion-icon name="information-circle-outline" (click)="presentTooltip($event, 'Content')"></ion-icon>
+            Content Module: <br />
+            <i>{{ contentRem | number: '1.2-2' }}rem = {{ contentRem * rootFontSize | number: '1.2-2' }}px</i>
+            <ion-range min="0.6" max="2.0" step="0.2" value="1" (ionChange)="contentModuleValueChange($event)"> </ion-range>
+        </p>
+
+        <p>
+            <ion-icon name="information-circle-outline" value="'Footer Module Modifier'" (click)="presentTooltip($event, 'Footer')"></ion-icon>
+            Footer Module: <br />
+            <i>{{ footerRem | number: '1.2-2' }}rem = {{ footerRem * rootFontSize | number: '1.2-2' }}px</i>
+            <ion-range min="0.5" max="1.6" step="0.2" value="1" (ionChange)="footerModuleValueChange($event)"> </ion-range>
+        </p>
+
+        <!-- ALLOWS USER TO SELECT PHONE-->
+        <ion-button id="click-trigger" (click)="presentPopover($event)">
+            {{ devicePhoneSelected }}
+        </ion-button>
+    </div>
+    <div class="right-column">
+        <!-- DISPLAY THE PHONE AND PHONE CONTENT-->
+        <openforge-default-phone-layout *ngIf="devicePhoneSelected === 'Default Phone Selected'">
+            <openforge-app-content></openforge-app-content>
+        </openforge-default-phone-layout>
+        <openforge-iphone-layout *ngIf="devicePhoneSelected === 'iPhone 6'">
+            <openforge-app-content></openforge-app-content>
+        </openforge-iphone-layout>
+        <openforge-iphone-x-layout *ngIf="devicePhoneSelected === 'iPhone X'">
+            <openforge-app-content></openforge-app-content>
+        </openforge-iphone-x-layout>
+    </div>
+</div>
