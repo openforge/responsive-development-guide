@@ -7,7 +7,6 @@ p {
     /* This height and width are relatives to the viewport */
     display: flex;
     height: 70vh;
-    width: 100vw;
     /* The margins center the content */
     position: fixed;
     top: 50%;
@@ -19,11 +18,11 @@ p {
 
 .right-column {
     background-color: white;
-    width: 25vw;
+    width: 45vw;
 }
 
 .left-column {
-    width: 25vw;
+    width: 45vw;
     padding: 0.8rem;
     margin: 0.8rem;
     box-shadow: 0 6px 12px -5px rgba(0, 0, 0, 0.75);
